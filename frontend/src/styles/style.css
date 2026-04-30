@@ -1,1 +1,259 @@
-https://campfiresecurity.dk
+:root {
+
+    /* Theme Specific */
+    --moodmap-background: #202940;
+    --moodmap-text: #e0e0e0;
+    --moodmap-border-radius-button: 0.5rem;
+    --moodmap-font: system-ui, sans-serif;
+
+    /* Colors */
+    --moodmap-orange: #f99e00;
+    --moodmap-red: #b20808;
+
+    /* Buttons */
+    --moodmap-button-primary-background: #db900e;
+    --moodmap-button-secondary-background: rgba(255,255,255,0.2);
+    --moodmap-button-text-primary: #111827;
+    --moodmap-button-text-secondary: #d7d7d7;
+    --moodmap-button-border: 2px solid rgba(255,255,255,0.3);
+    --moodmap-button-active-border: 2px solid rgba(255,255,255,1);
+    --moodmap-button-hover-border: 2px solid rgba(255,255,255,0.7);
+
+    /* Navbar */
+    --moodmap-nav-height: 6rem;
+    --moodmap-nav-background: #1e273d;
+    --moodmap-nav-text: #e0e0e0;
+    --moodmap-section-bottom-border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+/* ############################################################################################################################### */
+/*                             GENERAL                               */
+/* ################################################################# */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--moodmap-background);
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    font-family: var(--moodmap-font) !important;
+    letter-spacing: -0.025em;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 4px 1px rgba(0,0,0,0.2);
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 3px 1px rgba(0,0,0,0.2);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.moodmap-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--moodmap-border-radius-button);
+    border: var(--moodmap-button-border);
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+.moodmap-button:hover {
+    border: var(--moodmap-button-hover-border);
+}
+
+.moodmap-button.primary {
+    background: var(--moodmap-button-primary-background);
+    color: var(--moodmap-button-text-primary);
+}
+
+.moodmap-button.secondary {
+    background: var(--moodmap-button-secondary-background);
+    color: var(--moodmap-button-text-secondary);
+}
+
+.moodmap-button.xs {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.4);
+}
+
+.moodmap-button.s {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.45);
+}
+
+.moodmap-button.m {
+    font-size: 1rem;
+    padding: 0.5rem 0.9rem;
+    box-shadow: 0 3px 1px rgba(0,0,0,0.45);
+}
+
+.moodmap-button.l {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    box-shadow: 0 5px 1px rgba(0,0,0,0.7);
+}
+
+.moodmap-button.xl {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    box-shadow: 0 6px 1px rgba(0,0,0,0.5);
+}
+
+/* ############################################################################################################################### */
+/*                              NAVBAR                               */
+/* ################################################################# */
+
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--moodmap-nav-height);
+    padding: 0 6rem;
+    background: var(--moodmap-nav-background);
+    border-bottom: var(--moodmap-section-bottom-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-left img {
+    height: 5rem;
+    width: auto;
+    display: block;
+}
+
+.navbar-middle {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-middle li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-middle a {
+    color: var(--moodmap-nav-text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600 !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-middle a:hover {
+    color: var(--moodmap-text);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.navbar-middle .nav-entry {
+    position: relative;
+}
+
+.navbar-middle a:hover {
+    color: var(--moodmap-text);
+}
+
+.nav-entry:not(.has-dropdown) a:hover {
+    color: var(--moodmap-orange);
+}
+
+.nav-entry {
+    position: relative;
+}
+
+.nav-entry:hover .dropdown {
+    display: block;
+}
+
+.nav-entry .fa-chevron-down {
+    margin-left: 0.3rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-entry:hover .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 12rem;
+    background: #1e273d;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    display: none;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.9rem;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown li a:hover .dropdown-icon {
+    background: rgba(249, 158, 0, 0.12);
+    border: 1px solid var(--moodmap-orange);
+    color: var(--moodmap-orange);
+}
+
+.dropdown-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.25rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7);
+    transition: all 0.2s ease;
+}
