@@ -1,6 +1,6 @@
 // Pathing
 // _______
-// src/components/shared/Navbar.jsx
+// src/components/shared/navbar/Navbar.jsx
 
 function Navbar() {
     return (
@@ -97,8 +97,8 @@ function Navbar() {
 
             {/* Right */}
             <div className="navbar-right">
-                <button className="moodmap-button l primary">Log Ind</button>
-                <button className="moodmap-button l secondary">Opret Bruger</button>
+                <button className="moodmap-button l primary">Dashboard</button>
+                {/*<button className="moodmap-button l secondary">Kontakt</button>*/}
             </div>
 
         </nav>
