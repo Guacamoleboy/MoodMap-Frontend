@@ -2,11 +2,20 @@
 // _______
 // src/components/shared/navbar/NavbarEntryDropdown.jsx
 
-function NavbarEntryDropdown() {
+function NavbarEntryDropdown({ children }) {
+
+    // ------------ SETUP -------------------------------------------------------
+
+    // N/A
+
+    // ------------ RETURN ------------------------------------------------------
+
     return (
-        <>
-        </>
+        <ul className="dropdown">
+            {children}
+        </ul>
     )
+    
 }
 
 export default NavbarEntryDropdown

@@ -3,6 +3,7 @@
     /* Theme Specific */
     --moodmap-background: #202940;
     --moodmap-text: #e0e0e0;
+    --moodmap-ui-border-radius: 0.5rem;
     --moodmap-border-radius-button: 0.5rem;
     --moodmap-font: system-ui, sans-serif;
 
@@ -11,9 +12,9 @@
     --moodmap-red: #b20808;
 
     /* Buttons */
-    --moodmap-button-primary-background: #db900e;
+    --moodmap-button-primary-background: #c98715;
     --moodmap-button-secondary-background: rgba(255,255,255,0.2);
-    --moodmap-button-text-primary: #111827;
+    --moodmap-button-text-primary: #dbdbdb;
     --moodmap-button-text-secondary: #d7d7d7;
     --moodmap-button-border: 2px solid rgba(255,255,255,0.3);
     --moodmap-button-active-border: 2px solid rgba(255,255,255,1);
@@ -70,6 +71,7 @@ p {
 }
 
 .moodmap-button {
+    text-decoration: none !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -80,6 +82,7 @@ p {
     line-height: 1;
     transition: all 0.2s ease;
     letter-spacing: 0.2px;
+    text-shadow: 0 2px 1px rgba(110, 110, 110, 0.7);
 }
 
 .moodmap-button:hover {
@@ -127,8 +130,64 @@ p {
 }
 
 /* ############################################################################################################################### */
+/*                           ERROR LAYOUT                            */
+/* ################################################################# */
+
+.error-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+}
+
+/* ############################################################################################################################### */
+/*                            AUTH LAYOUT                            */
+/* ################################################################# */
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202940;
+    background-image: radial-gradient(
+        circle at 1px 1px,
+        rgba(254, 161, 0, 0.209) 1px,
+        transparent 0
+    );
+    background-size: 32px 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################################################################################################################### */
 /*                              NAVBAR                               */
 /* ################################################################# */
+
+/* !! REFACTOR THIS - to Navbar.module.css at some point !! */
 
 .navbar-wrapper {
     display: flex;

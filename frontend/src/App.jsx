@@ -2,17 +2,10 @@
 // _______
 // src/App.jsx
 
-import AppLayout from "./layout/AppLayout"
+import AppRoutes from '@routes/AppRoutes'
 
-function App() {
-
-  return (
-    <>
-      <AppLayout>
-        {/* <Hero /> later*/}
-      </AppLayout>
-    </>
-  )
-}
+const App = () => (
+  <AppRoutes />
+)
 
 export default App

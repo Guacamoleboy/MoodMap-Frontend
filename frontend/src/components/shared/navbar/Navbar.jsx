@@ -2,107 +2,72 @@
 // _______
 // src/components/shared/navbar/Navbar.jsx
 
+import NavbarLogo from "./NavbarLogo"
+import NavbarButton from "./NavbarButton"
+import NavbarEntry from "./NavbarEntry"
+import NavbarEntryDropdown from "./NavbarEntryDropdown"
+import NavbarEntryDropdownItem from "./NavbarEntryDropdownItem"
+
 function Navbar() {
+
+    // ------------ SETUP -------------------------------------------------------
+
+    // N/A
+
+    // ------------ RETURN ------------------------------------------------------
+
     return (
         <nav className="navbar-wrapper">
 
             {/* Left */}
             <div className="navbar-left">
-                <img src="/images/logo/logo-svg.svg" alt="MoodMap Logo" />
+                <NavbarLogo src="/images/logo/logo-svg.svg" />
             </div>
+
+            {/* ------------------------------------------------------------------------------------------------------------- */}
 
             {/* Middle */}
             <ul className="navbar-middle">
+                
+                {/* Entry */}
+                <NavbarEntry label="Vores mission" href="/" />
 
                 {/* Entry */}
-                <li className="nav-entry">
-                    <a href="#">Vores mission</a>
-                </li>
+                <NavbarEntry label="Til virksomheder">
+                    <NavbarEntryDropdown>
+                        <NavbarEntryDropdownItem icon="fa-bar-chart" label="Overblik" />
+                        <NavbarEntryDropdownItem icon="fa-credit-card" label="Priser" />
+                        <NavbarEntryDropdownItem icon="fa-folder-open" label="Cases" />
+                    </NavbarEntryDropdown>
+                </NavbarEntry>
 
                 {/* Entry */}
-                <li className="nav-entry has-dropdown">
-                    <a href="#">
-                        Til virksomheder <i className="fa fa-chevron-down" />
-                    </a>
-                    <ul className="dropdown">
-                        <li>
-                            <a href="#">
-                                <span className="dropdown-icon">
-                                    <i className="fa fa-bar-chart" />
-                                </span>
-                                Overblik
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span className="dropdown-icon">
-                                    <i className="fa fa-credit-card" />
-                                </span>
-                                Priser
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span className="dropdown-icon">
-                                    <i className="fa fa-folder-open" />
-                                </span>
-                                Cases
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                {/* Entry */}
-                <li className="nav-entry has-dropdown">
-                    <a href="#">
-                        API <i className="fa fa-chevron-down" />
-                    </a>
-                    <ul className="dropdown">
-                        <li>
-                            <a href="#">
-                                <span className="dropdown-icon">
-                                    <i className="fa fa-book" />
-                                </span>
-                                Docs
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span className="dropdown-icon">
-                                    <i className="fa fa-lock" />
-                                </span>
-                                Auth
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span className="dropdown-icon">
-                                    <i className="fa fa-key" />
-                                </span>
-                                Access
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span className="dropdown-icon">
-                                    <i className="fa fa-question-circle" />
-                                </span>
-                                F&Q
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                <NavbarEntry label="API">
+                    <NavbarEntryDropdown>
+                        <NavbarEntryDropdownItem icon="fa-book" label="Docs" />
+                        <NavbarEntryDropdownItem icon="fa-lock" label="Auth" />
+                        <NavbarEntryDropdownItem icon="fa-key" label="Access" />
+                        <NavbarEntryDropdownItem icon="fa-question-circle" label="F&Q" />
+                    </NavbarEntryDropdown>
+                </NavbarEntry>
 
             </ul>
 
+            {/* ------------------------------------------------------------------------------------------------------------- */}
+
             {/* Right */}
             <div className="navbar-right">
-                <button className="moodmap-button l primary">Dashboard</button>
-                {/*<button className="moodmap-button l secondary">Kontakt</button>*/}
+                <NavbarButton
+                    label="Dashboard"
+                    to="/"
+                    size="l"
+                    variant="primary"
+                />
             </div>
 
         </nav>
     )
+
 }
 
 export default Navbar
