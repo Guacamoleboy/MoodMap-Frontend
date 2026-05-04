@@ -138,7 +138,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background);
+    background-color: var(--moodmap-background);
 }
 
 /* ############################################################################################################################### */
@@ -150,13 +150,13 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #202940;
+    background-color: var(--moodmap-background);
     background-image: radial-gradient(
         circle at 1px 1px,
         rgba(254, 161, 0, 0.209) 1px,
         transparent 0
     );
-    background-size: 32px 32px;
+    background-size: 2rem 2rem;
 }
 
 

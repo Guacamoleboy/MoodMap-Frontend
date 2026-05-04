@@ -51,6 +51,9 @@ function Navbar() {
                     </NavbarEntryDropdown>
                 </NavbarEntry>
 
+                {/* Entry */}
+                <NavbarEntry label="Devlog" href="/devlog" />
+
             </ul>
 
             {/* ------------------------------------------------------------------------------------------------------------- */}
@@ -59,7 +62,7 @@ function Navbar() {
             <div className="navbar-right">
                 <NavbarButton
                     label="Dashboard"
-                    to="/"
+                    to="/login"
                     size="l"
                     variant="primary"
                 />
