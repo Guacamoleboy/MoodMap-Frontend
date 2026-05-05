@@ -35,19 +35,19 @@ function Navbar() {
                 {/* Entry */}
                 <NavbarEntry label="Til virksomheder">
                     <NavbarEntryDropdown>
-                        <NavbarEntryDropdownItem icon="fa-bar-chart" label="Overblik" />
-                        <NavbarEntryDropdownItem icon="fa-credit-card" label="Priser" />
-                        <NavbarEntryDropdownItem icon="fa-folder-open" label="Cases" />
+                        <NavbarEntryDropdownItem icon="fa-bar-chart" label="Overblik" href="/wontadd" />
+                        <NavbarEntryDropdownItem icon="fa-credit-card" label="Priser" href="/wontadd" />
+                        <NavbarEntryDropdownItem icon="fa-folder-open" label="Cases" href="/wontadd" />
                     </NavbarEntryDropdown>
                 </NavbarEntry>
 
                 {/* Entry */}
                 <NavbarEntry label="API">
                     <NavbarEntryDropdown>
-                        <NavbarEntryDropdownItem icon="fa-book" label="Docs" />
-                        <NavbarEntryDropdownItem icon="fa-lock" label="Auth" />
-                        <NavbarEntryDropdownItem icon="fa-key" label="Access" />
-                        <NavbarEntryDropdownItem icon="fa-question-circle" label="F&Q" />
+                        <NavbarEntryDropdownItem icon="fa-book" label="Docs" href="/docs" />
+                        <NavbarEntryDropdownItem icon="fa-lock" label="Auth" href="/wontadd" />
+                        <NavbarEntryDropdownItem icon="fa-key" label="Access" href="/wontadd" />
+                        <NavbarEntryDropdownItem icon="fa-question-circle" label="F&Q" href="/wontadd" />
                     </NavbarEntryDropdown>
                 </NavbarEntry>
 
