@@ -2,9 +2,11 @@
 // _______
 // src/layout/AppLayout.jsx
 
-const AuthLayout = ({ children }) => (
+import { Outlet } from 'react-router-dom'
+
+const AuthLayout = () => (
     <div className="auth-wrapper">
-        {children}
+        <Outlet />
     </div>
 )
 

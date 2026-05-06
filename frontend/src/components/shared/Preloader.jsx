@@ -14,7 +14,7 @@ function Preloader() {
     // ------------ EFFECT ------------------------------------------------------
 
     useEffect(() => {
-        const timer = setTimeout(() => setVisible(false), 1400);
+        const timer = setTimeout(() => setVisible(false), 900);
         return () => clearTimeout(timer);
     }, []);
 
@@ -29,7 +29,7 @@ function Preloader() {
             <DotLottieReact
                 src="/images/logo/logo.lottie"
                 autoplay
-                speed={1.5}
+                speed={2.5}
                 className="preloader-animation"
             />
 

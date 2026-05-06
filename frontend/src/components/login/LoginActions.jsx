@@ -11,10 +11,10 @@ const LoginActions = ({ onSubmit, loading }) => {
 
     return (
         <div className={styles.actions}>
-            <button onClick={() => navigate('/forgot')} className="moodmap-button m secondary">
+            <button onClick={() => navigate('/wontadd')} className="moodmap-button m secondary">
                 QR
             </button>
-            <button onClick={() => navigate('/forgot')} className="moodmap-button m secondary">
+            <button onClick={() => navigate('/wontadd')} className="moodmap-button m secondary">
                 Hjælp
             </button>
             <button onClick={onSubmit} disabled={loading} className="moodmap-button m primary">

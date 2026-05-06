@@ -2,9 +2,11 @@
 // _______
 // src/layout/ErrorLayout.jsx
 
-const ErrorLayout = ({ children }) => (
+import { Outlet } from 'react-router-dom'
+
+const ErrorLayout = () => (
     <div className="error-wrapper">
-        {children}
+        <Outlet />
     </div>
 )
 

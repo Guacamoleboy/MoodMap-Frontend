@@ -1,12 +1,12 @@
 // Pathing
 // _______
-// src/pages/Dashboard.jsx
+// src/pages/DashboardPage.jsx
 
-function Dashboard() {
+function DashboardPage() {
     return (
         <>
         </>
     )
 }
 
-export default Dashboard
+export default DashboardPage

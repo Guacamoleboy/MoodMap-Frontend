@@ -30,7 +30,7 @@ function Navbar() {
             <ul className="navbar-middle">
                 
                 {/* Entry */}
-                <NavbarEntry label="Vores mission" href="/" />
+                <NavbarEntry label="Vores mission" href="/wontadd" />
 
                 {/* Entry */}
                 <NavbarEntry label="Til virksomheder">

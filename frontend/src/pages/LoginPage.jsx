@@ -1,14 +1,9 @@
 // Pathing
 // _______
-// src/pages/Login.jsx
+// src/pages/LoginPage.jsx
 
-import AuthLayout from '@layout/AuthLayout'
 import Login from '@components/login/Login'
 
-const LoginPage = () => (
-    <AuthLayout>
-        <Login />
-    </AuthLayout>
-)
+const LoginPage = () => <Login />
 
 export default LoginPage

@@ -1,10 +1,9 @@
-import ErrorLayout from '@layout/ErrorLayout'
+// Pathing
+// _______
+// src/pages/NoMatchPage.jsx
+
 import NoMatch from '@components/no-match/NoMatch'
 
-const NoMatchPage = () => (
-    <ErrorLayout>
-        <NoMatch />
-    </ErrorLayout>
-)
+const NoMatchPage = () => <NoMatch />
 
 export default NoMatchPage

@@ -4,13 +4,13 @@
 
 import { useNavigate } from 'react-router-dom'
 
-const NoMatchActions = () => {
+const BackOrLogin = ({ size = 'm' }) => {
 
     // ------------ SETUP ------------------------------------------------------
-    
+
     const navigate = useNavigate()
 
-    // ------------ EVENTS ------------------------------------------------------
+    // ------------ EVENTS -----------------------------------------------------
 
     const handleBack = () => {
         if (window.history.length > 1) {
@@ -20,13 +20,14 @@ const NoMatchActions = () => {
         }
     }
 
-    // ------------ RETURN ------------------------------------------------------
+    // ------------ RETURN -----------------------------------------------------
 
     return (
-        <button onClick={handleBack} className="moodmap-button m primary">
+        <button onClick={handleBack} className={`moodmap-button ${size} primary`}>
             Gå tilbage
         </button>
     )
+    
 }
 
-export default NoMatchActions
+export default BackOrLogin

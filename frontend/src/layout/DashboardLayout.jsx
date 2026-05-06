@@ -2,12 +2,13 @@
 // _______
 // src/layout/DashboardLayout.jsx
 
-import Preloader from "@components/shared/Preloader";
+import { Outlet } from 'react-router-dom'
+import Preloader from "@components/shared/Preloader"
 
-const DashboardLayout = ({ children }) => (
+const DashboardLayout = () => (
     <div className="dashboard-wrapper">
         <Preloader />
-        {children}
+        <Outlet />
     </div>
 )
 
