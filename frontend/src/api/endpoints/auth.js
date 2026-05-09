@@ -2,4 +2,15 @@
 // _______
 // src/api/endpoints/auth.js
 
-// FILE HERE AT SOME POINT
+import { client } from "../client";
+
+export function loginUser(credentials) {
+
+    // ---- RETURN ----------------------------------------------------------------------------------------------------------
+
+    return client("/auth/login", {
+        method: "POST",
+        body: JSON.stringify(credentials)
+    });
+
+}

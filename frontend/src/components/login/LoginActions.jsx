@@ -5,23 +5,34 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './Login.module.css'
 
-const LoginActions = ({ onSubmit, loading }) => {
+const LoginActions = ({ loading }) => {
+
+    // ---- SETUP -----------------------------------------------------------------------------------------------------------------
 
     const navigate = useNavigate()
 
+    // ---- RETURN -----------------------------------------------------------------------------------------------------------------
+
     return (
         <div className={styles.actions}>
-            <button onClick={() => navigate('/wontadd')} className="moodmap-button m secondary">
+
+            {/* ENTRY */}
+            <button type="button" onClick={() => navigate('/wontadd')}className="moodmap-button m secondary">
                 QR
             </button>
-            <button onClick={() => navigate('/wontadd')} className="moodmap-button m secondary">
+
+            {/* ENTRY */}
+            <button type="button" onClick={() => navigate('/wontadd')} className="moodmap-button m secondary">
                 Hjælp
             </button>
-            <button onClick={onSubmit} disabled={loading} className="moodmap-button m primary">
+            
+            {/* ENTRY */}
+            <button type="submit" disabled={loading} className="moodmap-button m primary" >
                 {loading ? 'Logger ind...' : 'Log ind'}
             </button>
-        </div>
-    )
-}
 
-export default LoginActions
+        </div>
+    );
+};
+
+export default LoginActions;
