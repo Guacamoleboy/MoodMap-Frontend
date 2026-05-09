@@ -6,7 +6,7 @@ import styles from './Login.module.css'
 import LoginForm from './LoginForm'
 import LoginActions from './LoginActions'
 
-const Login = ({ onSubmit, error, loading }) => (
+const Login = ({ onSubmit, loading }) => (
     <section className={styles.wrapper}>
         
         {/* LEFT */}
@@ -15,7 +15,7 @@ const Login = ({ onSubmit, error, loading }) => (
             <p>Denne side kræver at du har adgang. Log venligst ind.</p>
 
             {/* Form */}
-            <LoginForm onSubmit={onSubmit} error={error}>
+            <LoginForm onSubmit={onSubmit}>
 
                 <LoginActions loading={loading} />
 

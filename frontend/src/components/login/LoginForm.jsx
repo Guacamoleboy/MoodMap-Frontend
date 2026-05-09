@@ -4,39 +4,27 @@
 
 import styles from './Login.module.css'
 
-const LoginForm = ({ onSubmit, error, children }) => (
-
+const LoginForm = ({ onSubmit, children }) => (
     <form className={styles.form} onSubmit={onSubmit}>
 
         <div className={styles.fields}>
 
-            {/* Input */}
+            {/* ENTRY */}
             <div className={styles.field}>
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Brugernavn"
-                />
+                <input type="text" name="username" placeholder="Brugernavn" />
             </div>
 
-            {/* Input */}
+            {/* ENTRY */}
             <div className={styles.field}>
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Adgangskode"
-                />
+                <input type="password" name="password" placeholder="Adgangskode" />
             </div>
 
         </div>
-
-        {/* Error */}
-        {error && <p className={styles.error}>{error}</p>}
-
-        {/* Buttons */}
+        
+        {/* CHILD */}
         {children}
 
     </form>
-);
+)
 
-export default LoginForm;
+export default LoginForm

@@ -9,7 +9,9 @@
 
     /* Colors */
     --moodmap-orange: #f99e00;
+    --moodmap-green: #03b117;
     --moodmap-red: #b20808;
+    --moodmap-color: #2c3958;
 
     /* Buttons */
     --moodmap-button-primary-background: #c98715;
@@ -176,6 +178,57 @@ p {
 .preloader-animation {
     width: 40%;
     height: auto;
+}
+
+/* ############################################################################################################################### */
+/*                           NOTIFICATION                            */
+/* ################################################################# */
+
+.moodmap-notification {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--moodmap-nav-background);
+    border: 3px solid #d8d8d8;
+    border-radius: var(--moodmap-ui-border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    min-width: 280px;
+    max-width: 420px;
+    color: var(--moodmap-text);
+    font-weight: 600 !important;
+    background-color: #222b45;
+    animation: slideInRight 0.3s ease forwards;
+}
+
+.moodmap-notification.closing {
+    animation: slideOutRight 0.3s ease forwards;
+}
+
+.moodmap-notification-message {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.moodmap-notification-close {
+    background: none;
+    border: none;
+    color: var(--moodmap-text);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.moodmap-notification-close:hover {
+    opacity: 1;
 }
 
 

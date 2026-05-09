@@ -27,7 +27,7 @@ const LoginActions = ({ loading }) => {
             </button>
             
             {/* ENTRY */}
-            <button type="submit" disabled={loading} className="moodmap-button m primary" >
+            <button type="submit" disabled={loading} className="moodmap-button m primary">
                 {loading ? 'Logger ind...' : 'Log ind'}
             </button>
 

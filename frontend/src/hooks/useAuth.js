@@ -46,6 +46,7 @@ export function useAuth() {
             navigate("/dashboard")
         } catch (err) {
             setError(err.message)
+            throw err
         } finally {
             setLoading(false)
         }
