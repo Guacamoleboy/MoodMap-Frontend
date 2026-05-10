@@ -2,13 +2,15 @@
 // _______
 // src/components/shared/notification/Notification.jsx
 
-import { useEffect, useState } from 'react'
+import { useNotification } from './Notification.hooks'
 
 const Notification = ({ message, type = 'info', onClose }) => {
 
-    // ---- SETUP ----------------------------------------------------------------------------------------------------------
+    // ---- STATE -----------------------------------------------------------------------------------------------------------
 
-    const [closing, setClosing] = useState(false)
+    const { closing, handleClose } = useNotification(onClose)
+
+    // ---- COLOR SETUP -----------------------------------------------------------------------------------------------------
 
     const colorMap = {
         success: 'var(--moodmap-green)',
@@ -16,18 +18,6 @@ const Notification = ({ message, type = 'info', onClose }) => {
         error:   'var(--moodmap-red)',
         info:    'var(--moodmap-color)',
     }
-
-    // ---- EVENTS ---------------------------------------------------------------------------------------------------------
-
-    const handleClose = () => {
-        setClosing(true)
-        setTimeout(onClose, 300)
-    }
-
-    useEffect(() => {
-        const timer = setTimeout(handleClose, 5000)
-        return () => clearTimeout(timer)
-    })
 
     // ---- RETURN ---------------------------------------------------------------------------------------------------------
 

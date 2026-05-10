@@ -5,6 +5,7 @@
 import { Routes, Route } from 'react-router-dom'
 
 import ProtectedRoutes from './ProtectedRoutes'
+import RoleRoutes, { DashboardRedirect } from './RoleRoutes'
 
 import AppLayout from '@layout/AppLayout'
 import AuthLayout from '@layout/AuthLayout'
@@ -14,9 +15,12 @@ import ErrorLayout from '@layout/ErrorLayout'
 import AppPage from '@pages/AppPage'
 import LoginPage from '@pages/LoginPage'
 import ForgotPage from '@pages/ForgotPage'
-import DashboardPage from '@pages/DashboardPage'
+import AdminDashboardPage from '@pages/dashboard/AdminDashboardPage'
+import ClientDashboardPage from '@pages/dashboard/ClientDashboardPage'
+import ClinicianDashboardPage from '@pages/dashboard/ClinicianDashboardPage'
+import ClinicDashboardPage from '@pages/dashboard/ClinicDashboardPage'
 import NoMatchPage from '@pages/NoMatchPage'
-import WontAddPage from '../pages/WontAddPage'
+import WontAddPage from '@pages/WontAddPage'
 
 const AppRoutes = () => (
     <Routes>
@@ -29,7 +33,25 @@ const AppRoutes = () => (
         {/* PROTECTED */}
         <Route element={<ProtectedRoutes />}>
             <Route element={<DashboardLayout />}>
-                <Route path="/dashboard" element={<DashboardPage />} />
+
+                <Route path="/dashboard" element={<DashboardRedirect />} />
+
+                <Route element={<RoleRoutes role="Admin" />}>
+                    <Route path="/dashboard/admin" element={<AdminDashboardPage />} />
+                </Route>
+
+                <Route element={<RoleRoutes role="Clinician" />}>
+                    <Route path="/dashboard/clinician" element={<ClinicianDashboardPage />} />
+                </Route>
+
+                <Route element={<RoleRoutes role="Clinic" />}>
+                    <Route path="/dashboard/clinic" element={<ClinicDashboardPage />} />
+                </Route>
+
+                <Route element={<RoleRoutes role="Client" />}>
+                    <Route path="/dashboard/client" element={<ClientDashboardPage />} />
+                </Route>
+
             </Route>
         </Route>
 
