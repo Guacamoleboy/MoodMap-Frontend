@@ -9,7 +9,7 @@ const Dashboard = ({ children }) => (
 
         <DashboardNavbar />
         
-        <main className="dashboard__content">
+        <main className="dashboard-content">
             {children}
         </main>
 
