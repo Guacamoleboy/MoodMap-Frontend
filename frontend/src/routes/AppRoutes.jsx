@@ -12,6 +12,9 @@ import AuthLayout from '@layout/AuthLayout'
 import DashboardLayout from '@layout/DashboardLayout'
 import ErrorLayout from '@layout/ErrorLayout'
 
+import SharedSettingsPage from '@pages/settings/SharedSettingsPage'
+import AdminSettingsPage from '@pages/settings/AdminSettingsPage'
+
 import AppPage from '@pages/AppPage'
 import LoginPage from '@pages/LoginPage'
 import ForgotPage from '@pages/ForgotPage'
@@ -34,6 +37,7 @@ const AppRoutes = () => (
         <Route element={<ProtectedRoutes />}>
             <Route element={<DashboardLayout />}>
 
+                {/* DASHBOARD SPECIFIC */}
                 <Route path="/dashboard" element={<DashboardRedirect />} />
 
                 <Route element={<RoleRoutes role="Admin" />}>
@@ -50,6 +54,13 @@ const AppRoutes = () => (
 
                 <Route element={<RoleRoutes role="Client" />}>
                     <Route path="/dashboard/client" element={<ClientDashboardPage />} />
+                </Route>
+
+                {/* SETTINGS*/}
+                <Route path="/settings" element={<SharedSettingsPage />} />
+
+                <Route element={<RoleRoutes role="Admin" />}>
+                    <Route path="/settings/admin" element={<AdminSettingsPage />} />
                 </Route>
 
             </Route>
