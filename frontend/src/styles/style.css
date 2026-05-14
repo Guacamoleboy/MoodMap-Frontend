@@ -31,6 +31,14 @@
 }
 
 /* ############################################################################################################################### */
+/*                         DARK / LIGHTMODE                          */
+/* ################################################################# */
+
+[data-theme="light"] {
+    --moodmap-background: #5e6988;
+}
+
+/* ############################################################################################################################### */
 /*                             GENERAL                               */
 /* ################################################################# */
 
@@ -129,6 +137,34 @@ p {
     font-size: 1.5rem;
     padding: 0.75rem 1.25rem;
     box-shadow: 0 6px 1px rgba(0,0,0,0.5);
+}
+
+.moodmap-highlight {
+    margin: 0 0.15rem;
+    font-weight: 600 !important;
+    color: #FFF !important;
+    background-color: var(--moodmap-orange);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 1px rgb(249, 158, 0, 0.5);
+}
+
+.moodmap-highlight.s {
+    margin: 0 0.05rem;
+    padding: 0.1rem 0.2rem;
+    box-shadow: 0 1px 1px rgb(249, 158, 0, 0.5);
+}
+
+.moodmap-highlight.m {
+    margin: 0 0.15rem;
+    padding: 0.2rem 0.4rem;
+    box-shadow: 0 3px 1px rgb(249, 158, 0, 0.5);
+}
+
+.moodmap-highlight.l {
+    margin: 0 0.3rem;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 5px 1px rgb(249, 158, 0, 0.5);
 }
 
 /* ############################################################################################################################### */
@@ -231,6 +267,56 @@ p {
     opacity: 1;
 }
 
+/* ############################################################################################################################### */
+/*                             SETTINGS                              */
+/* ################################################################# */
+
+.settings-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 6rem 2rem 4rem 2rem;
+}
+
+.settings-content {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.settings-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.settings-intro h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #FFF;
+}
+
+.settings-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.settings-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 
 
