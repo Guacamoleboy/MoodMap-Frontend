@@ -23,14 +23,15 @@
     gap: 0;
 }
 
-.item {
+.item a {
+    text-decoration: none;
     display: flex;
 }
 
 .link {
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.4);
+    color: #FFF;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
@@ -43,27 +44,12 @@
     position: relative;
 }
 
-.link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--moodmap-orange);
-    transition: width 0.5s ease;
-}
-
 .link:hover {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.link:hover::after {
-    width: 100%;
+    color: var(--moodmap-orange);
 }
 
 .link.active {
-    color: #fff;
+    color: var(--moodmap-orange);
 }
 
 .link.active::after {

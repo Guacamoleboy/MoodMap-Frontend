@@ -1,0 +1,50 @@
+.reminderEntry {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    text-transform: uppercase;
+    box-shadow: 
+        inset 4px 4px 2px rgba(0,0,0,0.25),
+        inset -4px -4px 2px rgba(0,0,0,0.25)
+}
+
+.reminderValue {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.65rem;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #FFF;
+    background: var(--moodmap-orange);
+    box-shadow:
+        0 3px 1px rgba(249, 158, 0, 0.4);
+}
+
+.reminderBottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+[data-theme="light"] .reminderEntry {
+    background: rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.06);
+    color: rgba(0,0,0,0.75);
+}

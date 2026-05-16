@@ -16,7 +16,7 @@ const DashboardAvatar = ({ user, open, onToggle, onLogout }) => {
     // ---- LINKS ----------------------------------------------------------------------------------------------------------
 
     const goProfile = () => {
-        navigate('/wontfix')
+        navigate('/wontadd')
         onToggle()
     }
 

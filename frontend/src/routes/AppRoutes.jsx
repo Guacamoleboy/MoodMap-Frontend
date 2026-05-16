@@ -18,10 +18,44 @@ import AdminSettingsPage from '@pages/settings/AdminSettingsPage'
 import AppPage from '@pages/AppPage'
 import LoginPage from '@pages/LoginPage'
 import ForgotPage from '@pages/ForgotPage'
-import AdminDashboardPage from '@pages/dashboard/AdminDashboardPage'
-import ClientDashboardPage from '@pages/dashboard/ClientDashboardPage'
-import ClinicianDashboardPage from '@pages/dashboard/ClinicianDashboardPage'
-import ClinicDashboardPage from '@pages/dashboard/ClinicDashboardPage'
+
+import AdminDashboardPage from '@pages/dashboard/admin/AdminDashboardPage'
+import AdminOverviewPage from '@pages/dashboard/admin/AdminOverviewPage'
+import AdminDataPage from '@pages/dashboard/admin/AdminDataPage'
+import AdminToolsPage from '@pages/dashboard/admin/AdminToolsPage'
+import AdminAccessPage from '@pages/dashboard/admin/AdminAccessPage'
+
+import ModeratorDashboardPage from '@pages/dashboard/moderator/ModeratorDashboardPage'
+import ModeratorOverviewPage from '@pages/dashboard/moderator/ModeratorOverviewPage'
+import ModeratorUsersPage from '@pages/dashboard/moderator/ModeratorUsersPage'
+import ModeratorTicketsPage from '@pages/dashboard/moderator/ModeratorTicketsPage'
+import ModeratorInternalPage from '@pages/dashboard/moderator/ModeratorInternalPage'
+
+import SupportDashboardPage from '@pages/dashboard/support/SupportDashboardPage'
+import SupportOverviewPage from '@pages/dashboard/support/SupportOverviewPage'
+import SupportUsersPage from '@pages/dashboard/support/SupportUsersPage'
+import SupportTicketsPage from '@pages/dashboard/support/SupportTicketsPage'
+import SupportInternalPage from '@pages/dashboard/support/SupportInternalPage'
+
+import ClinicianDashboardPage from '@pages/dashboard/clinician/ClinicianDashboardPage'
+import ClinicianOverviewPage from '@pages/dashboard/clinician/ClinicianOverviewPage'
+import ClinicianPatientsPage from '@pages/dashboard/clinician/ClinicianPatientsPage'
+import ClinicianAppointmentsPage from '@pages/dashboard/clinician/ClinicianAppointmentsPage'
+import ClinicianMedicinePage from '@pages/dashboard/clinician/ClinicianMedicinePage'
+import ClinicianMessagesPage from '@pages/dashboard/clinician/ClinicianMessagesPage'
+
+import ClinicDashboardPage from '@pages/dashboard/clinic/ClinicDashboardPage'
+import ClinicOverviewPage from '@pages/dashboard/clinic/ClinicOverviewPage'
+import ClinicTeamPage from '@pages/dashboard/clinic/ClinicTeamPage'
+import ClinicDataPage from '@pages/dashboard/clinic/ClinicDataPage'
+import ClinicMessagesPage from '@pages/dashboard/clinic/ClinicMessagesPage'
+
+import ClientDashboardPage from '@pages/dashboard/client/ClientDashboardPage'
+import ClientOverviewPage from '@pages/dashboard/client/ClientOverviewPage'
+import ClientAppointmentsPage from '@pages/dashboard/client/ClientAppointmentsPage'
+import ClientMedicinePage from '@pages/dashboard/client/ClientMedicinePage'
+import ClientFormsPage from '@pages/dashboard/client/ClientFormsPage'
+
 import NoMatchPage from '@pages/NoMatchPage'
 import WontAddPage from '@pages/WontAddPage'
 
@@ -40,21 +74,66 @@ const AppRoutes = () => (
                 {/* DASHBOARD SPECIFIC */}
                 <Route path="/dashboard" element={<DashboardRedirect />} />
 
-                <Route element={<RoleRoutes role="Admin" />}>
-                    <Route path="/dashboard/admin" element={<AdminDashboardPage />} />
-                </Route>
+                    {/* ADMIN */}
+                    <Route element={<RoleRoutes role="Admin" />}>
+                        <Route path="/dashboard/admin" element={<AdminDashboardPage />}>
+                            <Route index element={<AdminOverviewPage />} />
+                            <Route path="data" element={<AdminDataPage />} />
+                            <Route path="tools" element={<AdminToolsPage />} />
+                            <Route path="access" element={<AdminAccessPage />} />
+                        </Route>
+                    </Route>
+                    
+                    {/* MODERATOR */}
+                    <Route element={<RoleRoutes role="Moderator" />}>
+                        <Route path="/dashboard/moderator" element={<ModeratorDashboardPage />}>
+                            <Route index element={<ModeratorOverviewPage />} />
+                            <Route path="users" element={<ModeratorUsersPage />} />
+                            <Route path="tickets" element={<ModeratorTicketsPage />} />
+                            <Route path="internal" element={<ModeratorInternalPage />} />
+                        </Route>
+                    </Route>
 
-                <Route element={<RoleRoutes role="Clinician" />}>
-                    <Route path="/dashboard/clinician" element={<ClinicianDashboardPage />} />
-                </Route>
+                    {/* SUPPORT */}
+                    <Route element={<RoleRoutes role="Support" />}>
+                        <Route path="/dashboard/support" element={<SupportDashboardPage />}>
+                            <Route index element={<SupportOverviewPage />} />
+                            <Route path="users" element={<SupportUsersPage />} />
+                            <Route path="tickets" element={<SupportTicketsPage />} />
+                            <Route path="internal" element={<SupportInternalPage />} />
+                        </Route>
+                    </Route>
 
-                <Route element={<RoleRoutes role="Clinic" />}>
-                    <Route path="/dashboard/clinic" element={<ClinicDashboardPage />} />
-                </Route>
+                    {/* CLINICIAN */}
+                    <Route element={<RoleRoutes role="Clinician" />}>
+                        <Route path="/dashboard/clinician" element={<ClinicianDashboardPage />}>
+                            <Route index element={<ClinicianOverviewPage />} />
+                            <Route path="patients" element={<ClinicianPatientsPage />} />
+                            <Route path="appointments" element={<ClinicianAppointmentsPage />} />
+                            <Route path="medicine" element={<ClinicianMedicinePage />} />
+                            <Route path="messages" element={<ClinicianMessagesPage />} />
+                        </Route>
+                    </Route>
 
-                <Route element={<RoleRoutes role="Client" />}>
-                    <Route path="/dashboard/client" element={<ClientDashboardPage />} />
-                </Route>
+                    {/* CLINIC */}
+                    <Route element={<RoleRoutes role="Clinic" />}>
+                        <Route path="/dashboard/clinic" element={<ClinicDashboardPage />}>
+                            <Route index element={<ClinicOverviewPage />} />
+                            <Route path="team" element={<ClinicTeamPage />} />
+                            <Route path="data" element={<ClinicDataPage />} />
+                            <Route path="messages" element={<ClinicMessagesPage />} />
+                        </Route>
+                    </Route>
+
+                    {/* CLIENT */}
+                    <Route element={<RoleRoutes role="Client" />}>
+                        <Route path="/dashboard/client" element={<ClientDashboardPage />}>
+                            <Route index element={<ClientOverviewPage />} />
+                            <Route path="appointments" element={<ClientAppointmentsPage />} />
+                            <Route path="medicine" element={<ClientMedicinePage />} />
+                            <Route path="forms" element={<ClientFormsPage />} />
+                        </Route>
+                    </Route>
 
                 {/* SETTINGS*/}
                 <Route path="/settings" element={<SharedSettingsPage />} />
