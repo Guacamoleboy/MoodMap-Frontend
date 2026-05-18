@@ -2,50 +2,89 @@
 // _______
 // src/routes/RoleRoutes.jsx
 
-import { Navigate, Outlet } from 'react-router-dom'
-import { getUser } from '@hooks/useAuth'
+import {Navigate, Outlet} from "react-router-dom"
+import { useAuth } from "@hooks/useAuth"
 
-// ---- REDIRECT PATHING ----------------------------------------------------------------------------------------------------------
+// ---- REDIRECT PATHING ------------------------------------------------------
 
 const ROLE_REDIRECT = {
-    Admin:     '/dashboard/admin',
-    Moderator: '/dashboard/admin',
-    Support:   '/dashboard/admin',
-    Clinician: '/dashboard/clinician',
-    Clinic:    '/dashboard/clinic',
-    Client:    '/dashboard/client',
+    Admin: "/dashboard/admin",
+    Moderator: "/dashboard/moderator",
+    Support: "/dashboard/support",
+    Clinician: "/dashboard/clinician",
+    Clinic: "/dashboard/clinic",
+    Client: "/dashboard/client"
 }
 
-// ---- ACCESS --------------------------------------------------------------------------------------------------------------------
+// ---- ACCESS ----------------------------------------------------------------
 
 const ROLE_ACCESS = {
-    Admin:     ['Admin', 'Moderator', 'Support'],
-    Clinician: ['Clinician'],
-    Clinic:    ['Clinic'],
-    Client:    ['Client'],
+    Admin: [
+        "Admin",
+        "Moderator",
+        "Support"
+    ],
+    Moderator: [
+        "Moderator"
+    ],
+    Support: [
+        "Support"
+    ],
+    Clinician: [
+        "Clinician"
+    ],
+    Clinic: [
+        "Clinic"
+    ],
+    Client: [
+        "Client"
+    ]
 }
 
-// ---- DASHBOARD SPECIFIC ----------------------------------------------------------------------------------------------------------
+// ---- DASHBOARD REDIRECT ----------------------------------------------------
 
 export const DashboardRedirect = () => {
 
-    const user = getUser()
+    const { user } = useAuth()
+
     const redirect = ROLE_REDIRECT[user?.role]
 
-    if (!redirect) return <Navigate to="/login" replace />
-    return <Navigate to={redirect} replace />
+    if (!redirect) {
+        return (
+            <Navigate
+                to="/login"
+                replace
+            />
+        )
+    }
+
+    return (
+        <Navigate
+            to={redirect}
+            replace
+        />
+    )
 
 }
 
-// ---- ROLE CHECK & REDIRECT -------------------------------------------------------------------------------------------------------
+// ---- ROLE ROUTES -----------------------------------------------------------
 
 const RoleRoutes = ({ role }) => {
 
-    const user = getUser()
+    const { user } = useAuth()
+
     const allowed = ROLE_ACCESS[role] ?? []
 
-    if (allowed.includes(user?.role)) return <Outlet />
-    return <Navigate to="/dashboard" replace />
+    if (allowed.includes(user?.role)) {
+        return <Outlet />
+    }
+
+    return (
+        <Navigate
+            to="/dashboard"
+            replace
+        />
+    )
 
 }
 

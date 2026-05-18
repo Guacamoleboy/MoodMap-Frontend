@@ -2,9 +2,17 @@
 // _______
 // src/hooks/useTheme.js
 
-// Pathing
-// _______
-// src/hooks/useTheme.js
+// ------------------------------------------------------------------------------------------------
+
+//  What's the purpose of this class?
+//  _________________________________
+//
+//      -   Manages the dark / lightmode theme states and features.
+//      -   Theme persistence across the entire application.
+//      -   DOM synchronization for immediate UI updates.
+//
+
+// ------------------------------------------------------------------------------------------------
 
 import { useState } from 'react'
 

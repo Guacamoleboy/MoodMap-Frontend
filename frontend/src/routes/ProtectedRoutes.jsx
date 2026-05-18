@@ -2,37 +2,27 @@
 // _______
 // src/routes/ProtectedRoutes.jsx
 
-import { useState, useEffect } from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
-import { getMe } from '@api/endpoints/auth'
+import {Navigate, Outlet} from "react-router-dom"
+import { useAuth } from "@hooks/useAuth"
 
 const ProtectedRoutes = () => {
 
-    // ---- SETUP -----------------------------------------------------------------------------------------------------------------
+    const {user, authLoading} = useAuth()
 
-    const [auth, setAuth] = useState(null)
+    if (authLoading) {
+        return null
+    }
 
-    // ---- VALIDATE TOKEN -------------------------------------------------------------------------------------------------------
+    if (!user) {
+        return (
+            <Navigate
+                to="/login"
+                replace
+            />
+        )
+    }
 
-    useEffect(() => {
-        getMe()
-            .then(() => {
-                console.log("Token valid - access granted - DEBUG")
-                setAuth(true)
-            })
-            .catch(() => {
-                console.log("Token invalid - access denied - DEBUG")
-                localStorage.removeItem("access_token")
-                localStorage.removeItem("refresh_token")
-                setAuth(false)
-            })
-    }, [])
-
-    // ---- RETURN / REDIRECT / VALIDATE ----------------------------------------------------------------------------------------
-
-    if (auth === null) return null
-    if (auth) return <Outlet />
-    return <Navigate to="/login" replace />
+    return <Outlet />
 
 }
 

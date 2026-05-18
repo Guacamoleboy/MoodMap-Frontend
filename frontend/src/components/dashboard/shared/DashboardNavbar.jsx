@@ -4,7 +4,7 @@
 
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { getUser, useAuth } from '@hooks/useAuth'
+import { useAuth } from '@hooks/useAuth'
 import DashboardAvatar from './DashboardAvatar'
 import styles from './DashboardNavbar.module.css'
 
@@ -50,16 +50,18 @@ const NAV_ITEMS = {
 
 const DashboardNavbar = () => {
 
-    // ---- SETUP ----------------------------------------------------------------------------------------------------------
+    // ---- SETUP -------------------------------------------------------------
 
-    const user = getUser()
-    const { logout } = useAuth()
+    const {user, logout} = useAuth()
+
     const [avatarOpen, setAvatarOpen] = useState(false)
+
     const items = NAV_ITEMS[user?.role] ?? []
 
-    // ---- RETURN ---------------------------------------------------------------------------------------------------------
+    // ---- RETURN ------------------------------------------------------------
 
     return (
+
         <nav className={styles.navbar}>
 
             {/* LEFT */}
@@ -67,8 +69,13 @@ const DashboardNavbar = () => {
 
             {/* CENTER */}
             <ul className={styles.center}>
+
                 {items.map((item) => (
-                    <li key={item.path} className={styles.item}>
+
+                    <li
+                        key={item.path}
+                        className={styles.item}
+                    >
 
                         <NavLink
                             to={item.path}
@@ -79,25 +86,35 @@ const DashboardNavbar = () => {
                                     : styles.link
                             }
                         >
+
                             {item.label}
+
                         </NavLink>
 
                     </li>
+
                 ))}
+
             </ul>
 
             {/* RIGHT */}
             <div className={styles.right}>
+
                 <DashboardAvatar
                     user={user}
                     open={avatarOpen}
-                    onToggle={() => setAvatarOpen(prev => !prev)}
+                    onToggle={() =>
+                        setAvatarOpen(prev => !prev)
+                    }
                     onLogout={logout}
                 />
+
             </div>
 
         </nav>
+
     )
+
 }
 
 export default DashboardNavbar
