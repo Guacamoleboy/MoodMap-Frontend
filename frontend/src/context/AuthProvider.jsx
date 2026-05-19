@@ -16,17 +16,7 @@ import {useEffect, useState} from "react"
 import {useNavigate} from "react-router-dom"
 import {AuthContext} from "./AuthContext"
 import {loginUser, getMe} from "@api/endpoints/auth"
-
-// ---- JWT DECODE ------------------------------------------------------------
-
-const decodeToken = (token) => {
-    try {
-        const payload = token.split(".")[1]
-        return JSON.parse(atob(payload))
-    } catch {
-        return null
-    }
-}
+import { decodeToken } from "@utils/token"
 
 // ---- PROVIDER --------------------------------------------------------------
 

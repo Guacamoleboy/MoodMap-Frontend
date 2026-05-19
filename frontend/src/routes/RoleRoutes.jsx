@@ -2,44 +2,9 @@
 // _______
 // src/routes/RoleRoutes.jsx
 
-import {Navigate, Outlet} from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 import { useAuth } from "@hooks/useAuth"
-
-// ---- REDIRECT PATHING ------------------------------------------------------
-
-const ROLE_REDIRECT = {
-    Admin: "/dashboard/admin",
-    Moderator: "/dashboard/moderator",
-    Support: "/dashboard/support",
-    Clinician: "/dashboard/clinician",
-    Clinic: "/dashboard/clinic",
-    Client: "/dashboard/client"
-}
-
-// ---- ACCESS ----------------------------------------------------------------
-
-const ROLE_ACCESS = {
-    Admin: [
-        "Admin",
-        "Moderator",
-        "Support"
-    ],
-    Moderator: [
-        "Moderator"
-    ],
-    Support: [
-        "Support"
-    ],
-    Clinician: [
-        "Clinician"
-    ],
-    Clinic: [
-        "Clinic"
-    ],
-    Client: [
-        "Client"
-    ]
-}
+import { ROLE_REDIRECT, ROLE_ACCESS } from "@config/roles"
 
 // ---- DASHBOARD REDIRECT ----------------------------------------------------
 
