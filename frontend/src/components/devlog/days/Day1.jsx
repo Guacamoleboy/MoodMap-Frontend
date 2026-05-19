@@ -32,7 +32,7 @@ const Day1 = () => {
                 </p>
 
                 <p className={styles.logText}>
-                    Random Log <Highlight size="m" value="Diddy" />
+                    Random Log <Highlight size="m" value="Text" />
                 </p>
 
                 <DevlogImage
