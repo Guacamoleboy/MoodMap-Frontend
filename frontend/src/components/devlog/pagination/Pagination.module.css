@@ -1,0 +1,45 @@
+.paginationWrapper {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.paginationUp,
+.paginationDown {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d2d2d2;
+    border-radius: 0.5rem;
+    background: var(--moodmap-orange);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 1px rgba(0,0,0,0.7);
+}
+
+.paginationUp:hover,
+.paginationDown:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(2px);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.5);
+}
+
+.paginationUp i,
+.paginationDown i {
+    font-size: 1.25rem;
+    font-weight: 500 !important;
+    color: #FFF;
+}
+
+.paginationUp:disabled,
+.paginationDown:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+}

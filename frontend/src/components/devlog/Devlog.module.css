@@ -1,0 +1,110 @@
+.day {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.headerDay {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--moodmap-orange);
+}
+
+.headerTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #FFF;
+    margin: 0;
+}
+
+.headerDescription {
+    max-width: 750px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+}
+
+.log {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 0.75rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 5px 1px rgba(0,0,0,0.35);
+}
+
+.logHeader {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.logText {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.78);
+}
+
+.logImage {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 5px 1px rgba(0,0,0,0.35);
+    object-fit: cover;
+}
+
+.s {
+    max-width: 300px;
+}
+
+.m {
+    max-width: 600px;
+}
+
+.l {
+    max-width: 900px;
+}
+
+.xl {
+    max-width: 100%;
+}
+
+.imageWrapper {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    z-index: 60;
+}
+
+.imageWrapper:hover {
+    z-index: 100;
+}
+
+:global(.moodmap-devlog-wrapper):has(.imageWrapper:hover) .devlogBlurOverlay {
+    opacity: 1;
+}
+
+.devlogBlurOverlay {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.2);
+    transition: opacity 0.3s ease;
+    z-index: 50;
+}

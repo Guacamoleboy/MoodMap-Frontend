@@ -11,6 +11,7 @@ import AppLayout from '@layout/AppLayout'
 import AuthLayout from '@layout/AuthLayout'
 import DashboardLayout from '@layout/DashboardLayout'
 import ErrorLayout from '@layout/ErrorLayout'
+import DevlogLayout from '@layout/DevlogLayout'
 
 import SharedSettingsPage from '@pages/settings/SharedSettingsPage'
 import AdminSettingsPage from '@pages/settings/AdminSettingsPage'
@@ -18,6 +19,7 @@ import AdminSettingsPage from '@pages/settings/AdminSettingsPage'
 import AppPage from '@pages/AppPage'
 import LoginPage from '@pages/LoginPage'
 import ForgotPage from '@pages/ForgotPage'
+import DevlogPage from '@pages/Devlogpage'
 
 import AdminDashboardPage from '@pages/dashboard/admin/AdminDashboardPage'
 import AdminOverviewPage from '@pages/dashboard/admin/AdminOverviewPage'
@@ -149,6 +151,11 @@ const AppRoutes = () => (
         <Route element={<AuthLayout />}>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/forgot" element={<ForgotPage />} />
+        </Route>
+
+        {/* DEVLOG */}
+        <Route element={<DevlogLayout />}>
+            <Route path="/devlog" element={<DevlogPage />} />
         </Route>
 
         {/* ERRORS */}
