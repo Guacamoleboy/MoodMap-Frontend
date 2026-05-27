@@ -1,16 +1,19 @@
 // Pathing
 // _______
-// src/components/shared/hero/Hero.jsx
+// src/components/index/hero/Hero.jsx
 
 import styles from './Hero.module.css'
+
 import HeroLeft from './HeroLeft'
 import HeroRight from './HeroRight'
 
-function Hero() {
+const Hero = () => {
     return (
         <section className={styles.heroWrapper}>
-            <HeroLeft />
-            <HeroRight />
+            <div className={styles.heroContainer}>
+                <HeroLeft />
+                <HeroRight />
+            </div>
         </section>
     )
 }
