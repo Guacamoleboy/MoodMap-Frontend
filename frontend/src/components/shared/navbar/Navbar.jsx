@@ -7,12 +7,13 @@ import NavbarButton from "./NavbarButton"
 import NavbarEntry from "./NavbarEntry"
 import NavbarEntryDropdown from "./NavbarEntryDropdown"
 import NavbarEntryDropdownItem from "./NavbarEntryDropdownItem"
+import { useAuth } from "@hooks/useAuth"
 
 function Navbar() {
 
     // ------------ SETUP -------------------------------------------------------
 
-    // N/A
+    const { isAuthenticated } = useAuth()
 
     // ------------ RETURN ------------------------------------------------------
 
@@ -61,8 +62,8 @@ function Navbar() {
             {/* Right */}
             <div className="navbar-right">
                 <NavbarButton
-                    label="Dashboard"
-                    to="/login"
+                    label={isAuthenticated ? "Dashboard" : "Log Ind"}
+                    to={isAuthenticated ? "/dashboard" : "/login"}
                     size="l"
                     variant="primary"
                 />

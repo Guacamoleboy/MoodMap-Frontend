@@ -17,6 +17,17 @@ const HeroLeft = () => {
                 gennem simpel og overskuelig tracking.
             </p>
 
+            <div className={styles.partnerBlock}>
+                <p className={styles.partnerText}>
+                    Vi samarbejder med
+                </p>
+
+                <img
+                    className={styles.partnerLogo}
+                    src="/images/components/hero/laegemiddelstyrelsen-icon.png"
+                    alt="Lægemiddelstyrelsen"
+                />
+            </div>
         </div>
     )
 }

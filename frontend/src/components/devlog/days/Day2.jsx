@@ -2,12 +2,9 @@
 // _______
 // src/components/devlog/days/Day2.jsx
 
-// Pathing
-// _______
-// src/components/devlog/days/Day1.jsx
-
 import styles from '../Devlog.module.css'
 import DevlogImage from '../shared/DevlogImage'
+import Highlight from '@components/shared/Highlight'
 
 const Day2 = () => {
 

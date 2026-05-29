@@ -8,7 +8,7 @@ const HeroRight = () => {
     return (
         <div className={styles.heroRight}>
             <img
-                src='/images/components/hero/4.svg'
+                src='/images/components/hero/3.svg'
                 alt='MoodMap Hero'
             />
         </div>

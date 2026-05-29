@@ -1,0 +1,348 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--moodmap-background);
+  padding: 5rem 1.5rem 8rem;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--moodmap-orange);
+}
+
+.heading {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--moodmap-text);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.baseUrl {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.baseUrl .fa { color: var(--moodmap-orange); font-size: 0.75rem; }
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--moodmap-border-radius-button);
+  border: var(--moodmap-button-border);
+  background: var(--moodmap-button-secondary-background);
+  color: var(--moodmap-button-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: border 0.15s ease, background 0.15s ease, color 0.15s ease;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.4);
+}
+
+.tab:hover { border: var(--moodmap-button-hover-border); }
+.tabActive  { border: var(--moodmap-button-active-border) !important; color: #fff !important; box-shadow: 0 4px 1px rgba(0,0,0,0.4); }
+
+.tabGET.tabActive    { background: rgba(3,177,23,0.15);   border-color: #03b117 !important; color: #FFF; }
+.tabPOST.tabActive   { background: rgba(42,125,225,0.15); border-color: #2a7de1 !important; color: #FFF; }
+.tabPUT.tabActive    { background: rgba(249,158,0,0.15);  border-color: #f99e00 !important; color: #FFF; }
+.tabDELETE.tabActive { background: rgba(178,8,8,0.15);    border-color: #b20808 !important; color: #FFF; }
+.groups { display: flex; flex-direction: column; gap: 2.5rem; }
+
+.group { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.methodLabel {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem;
+}
+
+.methodGET    { color: #03b117; }
+.methodPOST   { color: #2a7de1; }
+.methodPUT    { color: #f99e00; }
+.methodDELETE { color: #e05555; }
+
+.methodCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.row {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--moodmap-ui-border-radius);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.row:hover,
+.rowOpen { border-color: rgba(255,255,255,0.25); }
+
+.rowSummary {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 72px 1fr auto 20px;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255,255,255,0.04);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.rowSummary:hover { background: rgba(255,255,255,0.07); }
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em;
+  text-align: center;
+  box-shadow: 0 3px 1px rgba(0,0,0,0.4);
+}
+
+.badgeGET    { background: rgba(3,177,23,0.15);   color: #03b117; }
+.badgePOST   { background: rgba(42,125,225,0.15); color: #2a7de1; }
+.badgePUT    { background: rgba(249,158,0,0.15);  color: #f99e00; }
+.badgeDELETE { background: rgba(178,8,8,0.2);     color: #e05555; }
+
+.endpoint {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.endpointBase { color: rgba(255,255,255,0.3); }
+.endpointPath { color: var(--moodmap-text); font-weight: 600; }
+
+.accessBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: flex-end;
+}
+
+.access {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.55rem;
+  border-radius: 99px;
+  white-space: nowrap;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.45);
+}
+
+.access .fa { font-size: 0.6rem; }
+
+.accessPUBLIC  { color: #03b117; background: rgba(3,177,23,0.1); }
+.accessJWT     { color: #2a7de1; background: rgba(42,125,225,0.1); }
+.accessAPI     { color: #38bdf8; background: rgba(56,189,248,0.1); }
+.accessADMIN   { color: #c13030; background: rgba(178,8,8,0.15); }
+.accessSUPPORT { color: var(--moodmap-orange); background: rgba(249,158,0,0.1); }
+
+.chevron {
+  color: rgba(255,255,255,0.3);
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+  justify-self: center;
+}
+
+.chevronOpen { transform: rotate(180deg); }
+
+.params {
+  padding: 1rem 1.25rem 1.25rem;
+  background: rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.expandedDescription {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.paramsHeading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin: 0;
+}
+
+.noParams {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.3);
+  margin: 0;
+}
+
+.paramsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.paramsTable th {
+  text-align: left;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  padding: 0 0.75rem 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.paramsTable td {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  color: var(--moodmap-text);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  vertical-align: top;
+}
+
+.paramsTable tr:last-child td { border-bottom: none; }
+
+.paramsTable code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  color: var(--moodmap-orange);
+  background: rgba(249,158,0,0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+.paramType {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+}
+
+.paramTypeparam { background: rgba(42,125,225,0.15); color: #2a7de1; }
+.paramTypequery { background: rgba(3,177,23,0.12);   color: #03b117; }
+.paramTypebody  { background: rgba(249,158,0,0.12);  color: #f99e00; }
+
+.required { color: #e05555; font-weight: 600; font-size: 0.78rem; }
+.optional  { color: rgba(255,255,255,0.3); font-size: 0.78rem; }
+
+@media (max-width: 768px) {
+  .rowSummary {
+    grid-template-columns: 60px 1fr 20px;
+    grid-template-rows: auto auto;
+    row-gap: 0.4rem;
+  }
+
+  .accessBadges {
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: flex-start;
+  }
+
+  .chevron {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.bodyBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.dtoName {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(42,125,225,0.12);
+  color: #2a7de1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.jsonBlock {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.02)
+    );
+  border: 1px solid rgba(255,255,255,0.08);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #d6e2ff;
+}
+
+.jsonBlock code {
+  white-space: pre;
+}

@@ -35,7 +35,7 @@ const Day1 = () => {
                     Ifm, at jeg tidligere havde startet projektet ud med at lave det som <Highlight size="m" value=".tsx" /> og <Highlight size="m" value="Next.js" />, skulle jeg omskrive og tænke projektet om.
                 </p>
 
-                <p className={styles.logTetxt}>
+                <p className={styles.logText}>
                     Jeg startede ud med at lave et <Highlight size="m" value="FigJam" /> over farver, framework og UI Componenents som kan ses herunder, eller via FigJam link under min <Highlight size="m" value="README.md" /> fil.
                 </p>
 

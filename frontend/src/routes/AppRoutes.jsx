@@ -61,12 +61,15 @@ import ClientFormsPage from '@pages/dashboard/client/ClientFormsPage'
 import NoMatchPage from '@pages/NoMatchPage'
 import WontAddPage from '@pages/WontAddPage'
 
+import DocsPage from '@pages/DocsPage'
+
 const AppRoutes = () => (
     <Routes>
 
         {/* APP */}
         <Route element={<AppLayout />}>
             <Route path="/" element={<AppPage />} />
+            <Route path="/docs" element={<DocsPage />} />
         </Route>
 
         {/* PROTECTED */}

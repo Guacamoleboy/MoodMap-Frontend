@@ -4,6 +4,7 @@
 
 import styles from '../Devlog.module.css'
 import DevlogImage from '../shared/DevlogImage'
+import Highlight from '@components/shared/Highlight'
 
 const Day5 = () => {
 
