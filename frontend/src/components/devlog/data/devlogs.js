@@ -16,6 +16,17 @@
 
 import Day1 from '../days/Day1'
 import Day2 from '../days/Day2'
+import Day3 from '../days/Day3'
+import Day4 from '../days/Day4'
+import Day5 from '../days/Day5'
+import Day6 from '../days/Day6'
+import Day7 from '../days/Day7'
+import Day8 from '../days/Day8'
+import Day9 from '../days/Day9'
+import Day10 from '../days/Day10'
+import Day11 from '../days/Day11'
+import Day12 from '../days/Day12'
+import Day13 from '../days/Day13'
 
 export const DEVLOGS = [
     {
@@ -26,4 +37,48 @@ export const DEVLOGS = [
         id: 2,
         component: Day2,
     },
+    {
+        id: 3,
+        component: Day3,
+    },
+    {
+        id: 4,
+        component: Day4,
+    },
+    {
+        id: 5,
+        component: Day5,
+    },
+    {
+        id: 6,
+        component: Day6,
+    },
+    {
+        id: 7,
+        component: Day7,
+    },
+    {
+        id: 8,
+        component: Day8,
+    },
+    {
+        id: 9,
+        component: Day9,
+    },
+    {
+        id: 10,
+        component: Day10,
+    },
+    {
+        id: 11,
+        component: Day11,
+    },
+    {
+        id: 12,
+        component: Day12,
+    },
+    {
+        id: 13,
+        component: Day13,
+    }
 ]
