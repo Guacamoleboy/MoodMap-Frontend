@@ -1,3 +1,18 @@
+# --------------------------------------------------------------------------------------------
+
+# Version 1.4.0
+# Created by Guacamoleboy
+# Last updated: 30/05-2026
+
+# FILE PURPOSE
+#   - Multi-stage Dockerfile for MoodMap React frontend
+#   - Stage 1: Builds the React app using Node
+#   - Stage 2: Serves the static build files via nginx
+
+# --------------------------------------------------------------------------------------------
+
+## ---- STAGE 1 ------------------------------------------------------------------------------
+
 FROM node:22-alpine AS build
 
 WORKDIR /app
@@ -9,6 +24,8 @@ RUN npm install
 COPY frontend/ ./
 
 RUN npm run build
+
+## ---- STAGE 2 ------------------------------------------------------------------------------
 
 FROM nginx:alpine
 
