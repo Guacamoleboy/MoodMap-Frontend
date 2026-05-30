@@ -46,4 +46,3 @@ backend/logs
 # === Sensitive ===
 docker-compose.yml
 **/config.properties
-nginx.conf
