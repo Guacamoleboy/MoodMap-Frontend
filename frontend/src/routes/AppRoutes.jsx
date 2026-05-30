@@ -19,7 +19,7 @@ import AdminSettingsPage from '@pages/settings/AdminSettingsPage'
 import AppPage from '@pages/AppPage'
 import LoginPage from '@pages/LoginPage'
 import ForgotPage from '@pages/ForgotPage'
-import DevlogPage from '@pages/Devlogpage'
+import DevlogPage from '@pages/DevlogPage'
 
 import AdminDashboardPage from '@pages/dashboard/admin/AdminDashboardPage'
 import AdminOverviewPage from '@pages/dashboard/admin/AdminOverviewPage'
