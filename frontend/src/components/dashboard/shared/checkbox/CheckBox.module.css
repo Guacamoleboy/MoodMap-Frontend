@@ -1,0 +1,30 @@
+.checkbox {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 0.3rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkbox i {
+    font-size: 0.7rem;
+    color: transparent;
+    transition: color 0.2s ease;
+}
+
+.active {
+    background: var(--moodmap-orange);
+    border-color: var(--moodmap-orange);
+    box-shadow:
+        0 2px 1px rgba(249,158,0,0.35);
+}
+
+.active i {
+    color: #FFF;
+}

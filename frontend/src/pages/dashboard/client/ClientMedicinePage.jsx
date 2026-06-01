@@ -4,7 +4,7 @@
 
 import CurrentMedication from '@components/dashboard/client/medication/CurrentMedication'
 import Reminders from '@components/dashboard/client/medication/Reminders'
-import SideEffects from '@components/dashboard/client/medication/SideEffects'
+import SideEffects from '@components/dashboard/client/medication/sideeffects/SideEffects'
 
 function ClientMedicinePage() {
     return (

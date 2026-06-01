@@ -35,7 +35,10 @@ const CurrentMedication = () => {
         <section className="dashboard-card">
 
             <div className="dashboard-card-header">
-                <h2>Nuværende medicin</h2>
+                <div className="dashboard-card-title">
+                    <i className="fa fa-medkit" />
+                    <h2>Nuværende medicin</h2>
+                </div>
                 <p>
                     Her kan du se din nuværende aktive medicin samt dosering og status.
                 </p>

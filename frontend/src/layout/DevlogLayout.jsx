@@ -3,7 +3,7 @@
 // src/layout/DevlogLayout.jsx
 
 import { Outlet } from 'react-router-dom'
-import Preloader from "@components/shared/Preloader";
+import Preloader from "@components/shared/preloader/Preloader";
 
 function DevlogLayout() {
   return (

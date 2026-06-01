@@ -1,0 +1,19 @@
+.wrapper {
+    display: block;
+    width: 100%;
+}
+
+.tooltip {
+    position: fixed;
+    z-index: 999999;
+    background: #202940;
+    border: 2px solid #929292;
+    color: #fff;
+    font-weight: 600 !important;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.4rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
+}

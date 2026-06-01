@@ -18,7 +18,10 @@ const Reminders = () => {
 
             {/* HEADER */}
             <div className="dashboard-card-header">
-                <h2>Påmindelser</h2>
+                <div className="dashboard-card-title">
+                    <i className="fa fa-bell-o" />
+                    <h2>Påmindelser</h2>
+                </div>
                 <p>
                     Oversigt over kommende medicinpåmindelser og planlagte tider.
                 </p>

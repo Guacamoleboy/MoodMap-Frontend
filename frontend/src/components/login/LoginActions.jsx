@@ -17,7 +17,7 @@ const LoginActions = ({ loading }) => {
         <div className={styles.actions}>
 
             {/* ENTRY */}
-            <button type="button" onClick={() => navigate('/wontadd')}className="moodmap-button m secondary">
+            <button type="button" onClick={() => navigate('/wontadd')} className="moodmap-button m secondary">
                 QR
             </button>
 
