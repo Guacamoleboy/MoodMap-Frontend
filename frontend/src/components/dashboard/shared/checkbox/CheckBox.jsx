@@ -7,12 +7,17 @@ import styles from './CheckBox.module.css';
 
 function CheckBox({defaultActive = false}) {
 
+    // ------ SETUP ------------------------------------------------------------------
+
     const {active, toggle} = useCheckBox(defaultActive);
+
+    // ------ RETURN -----------------------------------------------------------------
 
     return (
         <button type="button" onClick={toggle}
-            className={`
-                ${styles.checkbox}
+            className=
+            {`
+                ${styles.checkbox} 
                 ${active ? styles.active : ''}
             `}
         >

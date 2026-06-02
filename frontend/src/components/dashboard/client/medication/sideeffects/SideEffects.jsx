@@ -8,7 +8,11 @@ import SideEffectsEntry from './SideEffectsEntry';
 
 function SideEffects() {
 
+    // ------ SETUP ------------------------------------------------------------------
+
     const {sideEffects, removeEffect, addEffect} = useSideEffects();
+
+    // ------ RETURN -----------------------------------------------------------------
 
     return (
         <section className="dashboard-card">

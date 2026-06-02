@@ -8,6 +8,7 @@ function Notifications() {
     return (
         <section className="dashboard-card">
 
+            {/* META DATA */}
             <div className="dashboard-card-header">
                 <div className="dashboard-card-title">
                     <i className="fa fa-bell-o" />
@@ -16,10 +17,11 @@ function Notifications() {
                 <p>
                     Seneste påmindelser og opdateringer.
                 </p>
-            </div>
-
+            </div>  
+            
             <div className="dashboard-overview-entries">
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Påmindelse om medicin
@@ -27,6 +29,7 @@ function Notifications() {
                     <CheckBox />
                 </div>
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Ny besked fra kliniker
@@ -34,6 +37,7 @@ function Notifications() {
                     <CheckBox />
                 </div>
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Humørregistrering mangler

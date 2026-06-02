@@ -12,20 +12,27 @@ import Preferences from '@components/settings/shared/Preferences'
 import Sessions from '@components/settings/shared/Sessions'
 import Profile from '@components/settings/shared/Profile'
 import Reminders from '@components/settings/shared/Reminders'
+import { Helmet } from 'react-helmet-async'
 
 function SharedSettingsPage() {
     return (
-        <Settings>
-            <Appearance />
-            <Tracking />
-            <Cookies />
-            <GDPR />
-            <Privacy />
-            <Preferences />
-            <Reminders />
-            <Profile />
-            <Sessions />
-        </Settings>
+        <>
+            <Helmet>
+                <title>MoodMap - Settings</title>
+            </Helmet>
+
+            <Settings>
+                <Appearance />
+                <Tracking />
+                <Cookies />
+                <GDPR />
+                <Privacy />
+                <Preferences />
+                <Reminders />
+                <Profile />
+                <Sessions />
+            </Settings>
+        </>
     )
 }
 

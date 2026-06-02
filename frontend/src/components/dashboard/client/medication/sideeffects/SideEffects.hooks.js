@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 export function useSideEffects() {
 
+    // ------ STATE ---------------------------------------------------------------
+
     const [sideEffects, setSideEffects] = useState([
         {
             id: 1,
@@ -21,9 +23,13 @@ export function useSideEffects() {
         },
     ]);
 
+    // ------ REMOVE ---------------------------------------------------------------
+
     const removeEffect = (id) => {
         setSideEffects(prev => prev.filter(e => e.id !== id));
     };
+
+    // ------ ADD ------------------------------------------------------------------
 
     const addEffect = () => {
         const newEffect = {
@@ -35,6 +41,8 @@ export function useSideEffects() {
 
         setSideEffects(prev => [...prev, newEffect]);
     };
+
+    // ------ EXPORT ---------------------------------------------------------------
 
     return {
         sideEffects,

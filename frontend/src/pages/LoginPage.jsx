@@ -7,6 +7,7 @@ import {Navigate} from "react-router-dom"
 import Login from "@components/login/Login"
 import Notification from "@components/shared/notification/Notification"
 import { useAuth } from "@hooks/useAuth"
+import { Helmet } from 'react-helmet-async'
 
 const LoginPage = () => {
 
@@ -60,6 +61,11 @@ const LoginPage = () => {
 
     return (
         <>
+
+            {/* Title Tag Setup*/}
+            <Helmet>
+                <title>MoodMap - Log Ind</title>
+            </Helmet>
 
             <Login
                 onSubmit={handleSubmit}

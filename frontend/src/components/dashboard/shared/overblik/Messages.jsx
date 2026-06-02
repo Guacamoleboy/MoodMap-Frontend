@@ -7,7 +7,8 @@ import Tooltip from '@components/shared/tooltip/Tooltip';
 function Messages() {
     return (
         <section className="dashboard-card">
-
+            
+            {/* META DATA */}
             <div className="dashboard-card-header">
                 <div className="dashboard-card-title">
                     <i className="fa fa-comments-o" />
@@ -20,6 +21,7 @@ function Messages() {
 
             <div className="dashboard-overview-entries">
 
+                {/* ENTRY */}
                 <Tooltip text="Tryk for at svare">
                     <div className="dashboard-overview-entry">
 
@@ -40,6 +42,7 @@ function Messages() {
                     </div>
                 </Tooltip>
 
+                {/* ENTRY */}
                 <Tooltip text="Tryk for at svare">
                     <div className="dashboard-overview-entry">
 

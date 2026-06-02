@@ -5,7 +5,8 @@
 function Activity() {
     return (
         <section className="dashboard-card">
-
+            
+            {/* META DATA */}
             <div className="dashboard-card-header">
                 <div className="dashboard-card-title">
                     <i className="fa fa-line-chart" />
@@ -18,6 +19,7 @@ function Activity() {
 
             <div className="dashboard-overview-entries">
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Humør registreret
@@ -28,6 +30,7 @@ function Activity() {
                     </span>
                 </div>
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Medicin markeret som taget
@@ -38,6 +41,7 @@ function Activity() {
                     </span>
                 </div>
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Ny besked modtaget

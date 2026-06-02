@@ -5,6 +5,8 @@
 import styles from './SideEffects.module.css';
 import Tooltip from '@components/shared/tooltip/Tooltip';
 
+// ------ FORMAT FOR TOOLTIP ------------------------------------------------------------------
+
 const formatDate = (dateStr) => {
     if (!dateStr) return 'ukendt dato';
     const [year, month, day] = dateStr.split('-');
@@ -13,6 +15,8 @@ const formatDate = (dateStr) => {
     }
     return `${day}/${month}-${year}`;
 };
+
+// ------ ENTRY -------------------------------------------------------------------------------
 
 function SideEffectsEntry({ label, medication, createdAt, onRemove }) {
 

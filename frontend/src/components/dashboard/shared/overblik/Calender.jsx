@@ -5,7 +5,8 @@
 function Calendar() {
     return (
         <section className="dashboard-card">
-
+            
+            {/* META DATA */}
             <div className="dashboard-card-header">
                 <div className="dashboard-card-title">
                     <i className="fa fa-calendar" />
@@ -17,7 +18,8 @@ function Calendar() {
             </div>
 
             <div className="dashboard-overview-entries">
-
+                
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Mandag
@@ -27,6 +29,7 @@ function Calendar() {
                     </span>
                 </div>
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Tirsdag
@@ -36,6 +39,7 @@ function Calendar() {
                     </span>
                 </div>
 
+                {/* ENTRY */}
                 <div className="dashboard-overview-entry">
                     <span className="dashboard-overview-entry-title">
                         Onsdag

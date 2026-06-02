@@ -4,12 +4,19 @@
 
 import { Outlet } from 'react-router-dom'
 import Dashboard from '@components/dashboard/Dashboard'
+import { Helmet } from 'react-helmet-async'
 
 function ClientDashboardPage() {
     return (
-        <Dashboard>
-            <Outlet />
-        </Dashboard>
+        <>
+            <Helmet>
+                <title>MoodMap - Dashboard</title>
+            </Helmet>
+
+            <Dashboard>
+                <Outlet />
+            </Dashboard>
+        </>
     )
 }
 

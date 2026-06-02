@@ -7,25 +7,34 @@ import Appointments from '@components/dashboard/shared/overblik/Appointments';
 import Calendar from '@components/dashboard/shared/overblik/Calender';
 import Messages from '@components/dashboard/shared/overblik/Messages';
 import Notifications from '@components/dashboard/shared/overblik/Notifications';
+import { Helmet } from 'react-helmet-async'
 
 function ClientOverviewPage() {
     return (
-        <div className="dashboard-wrapper quick-fix">
+        <>
 
-            {/* TOP */}
-            <div className="dashboard-grid-2-equal">
-                <Appointments />
-                <Messages />
+            <Helmet>
+                <title>MoodMap - Overblik</title>
+            </Helmet>
+
+
+            <div className="dashboard-wrapper quick-fix">
+
+                {/* TOP */}
+                <div className="dashboard-grid-2-equal">
+                    <Appointments />
+                    <Messages />
+                </div>
+
+                {/* BOTTOM */}
+                <div className="dashboard-grid-3-equal">
+                    <Activity />
+                    <Calendar />
+                    <Notifications />
+                </div>
+
             </div>
-
-            {/* BOTTOM */}
-            <div className="dashboard-grid-3-equal">
-                <Activity />
-                <Calendar />
-                <Notifications />
-            </div>
-
-        </div>
+        </>
     );
 }
 

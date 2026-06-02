@@ -5,9 +5,15 @@
 import { useState } from 'react'
 import styles from './CurrentMedication.module.css'
 
+// ------ ENTRY (Move to it's own Component at some point) ---------------------------
+
 const MedicationEntry = ({ label, defaultActive = false }) => {
 
+    // ------ STATE ------------------------------------------------------------------
+
     const [active, setActive] = useState(defaultActive)
+
+    // ------ RETURN ------------------------------------------------------------------
 
     return (
         <div className={styles.entry}>
@@ -28,6 +34,8 @@ const MedicationEntry = ({ label, defaultActive = false }) => {
         </div>
     )
 }
+
+// ------ CURRENT MEDICATION ----------------------------------------------------------
 
 const CurrentMedication = () => {
 
