@@ -6,7 +6,7 @@
 **Frontend Repository**
 
 [![Visit MoodMap](https://img.shields.io/badge/Visit%20MoodMap-ffffff?style=for-the-badge&color=202940)](http://moodmap.guacamoleboy.dk)
-[![Visit Devlog](https://img.shields.io/badge/Visit%20Devlog-ffffff?style=for-the-badge&color=f99e00)](http://moodmap.guacamoleboy.dk/dev-log)
+[![Visit Devlog](https://img.shields.io/badge/Visit%20Devlog-ffffff?style=for-the-badge&color=f99e00)](http://moodmap.guacamoleboy.dk/devlog)
 
 </div>
 
@@ -155,7 +155,7 @@ The project also highlighted several areas for improvement. Looking back, there 
 | **Linting** | ESLint 10 |
 | **Package Manager** | npm |
 | **Version Control** | Git & GitHub |
-| **Dev Log** | [![Visit Devlog](https://img.shields.io/badge/Visit%20Devlog-ffffff?style=for-the-badge&color=f99e00)](http://moodmap.guacamoleboy.dk/dev-log) |
+| **Dev Log** | [![Visit Devlog](https://img.shields.io/badge/Visit%20Devlog-ffffff?style=for-the-badge&color=f99e00)](http://moodmap.guacamoleboy.dk/devlog) |
 
 ---
 
