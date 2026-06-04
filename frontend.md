@@ -23,4 +23,4 @@ KanBan
 > https://github.com/users/Guacamoleboy/projects/12
 
 YouTube Overview
-> N/A
+> https://youtu.be/dTqKWk7P7eo?si=byT6isvBsGlhGjj_
