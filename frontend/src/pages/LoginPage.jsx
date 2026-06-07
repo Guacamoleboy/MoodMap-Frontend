@@ -38,7 +38,8 @@ const LoginPage = () => {
     // ---- SUBMIT ------------------------------------------------------------
 
     const handleSubmit = async (e) => {
-
+        
+        // State control + browser re-load safety
         e.preventDefault()
 
         const formData = new FormData(e.target)
