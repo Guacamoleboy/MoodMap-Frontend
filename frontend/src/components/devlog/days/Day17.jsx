@@ -36,12 +36,12 @@ const Day17 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/17/1.png"
+                    src="/images/devlog/17/1.png"
                     size="l"
                 />
 
                 <DevlogImage
-                    src="/devlog/17/3.png"
+                    src="/images/devlog/17/3.png"
                     size="l"
                 />
 
@@ -62,7 +62,7 @@ const Day17 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/17/2.png"
+                    src="/images/devlog/17/2.png"
                     size="l"
                 />
 
@@ -75,12 +75,12 @@ const Day17 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/17/5.png"
+                    src="/images/devlog/17/5.png"
                     size="s"
                 />
 
                 <DevlogImage
-                    src="/devlog/17/4.png"
+                    src="/images/devlog/17/4.png"
                     size="l"
                 />
 

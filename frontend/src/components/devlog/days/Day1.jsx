@@ -40,22 +40,22 @@ const Day1 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/1/1.png"
+                    src="/images/devlog/1/1.png"
                     size="l"
                 />
 
                 <DevlogImage
-                    src="/devlog/1/2.png"
+                    src="/images/devlog/1/2.png"
                     size="m"
                 />
 
                 <DevlogImage
-                    src="/devlog/1/3.png"
+                    src="/images/devlog/1/3.png"
                     size="m"
                 />
 
                 <DevlogImage
-                    src="/devlog/1/4.png"
+                    src="/images/devlog/1/4.png"
                     size="m"
                 />
 
@@ -72,7 +72,7 @@ const Day1 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/1/5.png"
+                    src="/images/devlog/1/5.png"
                     size="l"
                 />
 

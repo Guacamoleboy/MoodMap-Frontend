@@ -36,7 +36,7 @@ const Day5 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/5/1.png"
+                    src="/images/devlog/5/1.png"
                     size="l"
                 />
 
@@ -49,7 +49,7 @@ const Day5 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/5/2.png"
+                    src="/images/devlog/5/2.png"
                     size="m"
                 />
 

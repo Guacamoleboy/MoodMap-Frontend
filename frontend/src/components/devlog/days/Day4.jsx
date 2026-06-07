@@ -40,7 +40,7 @@ const Day4 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/4/1.png"
+                    src="/images/devlog/4/1.png"
                     size="s"
                 />
 
@@ -49,7 +49,7 @@ const Day4 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/4/2.png"
+                    src="/images/devlog/4/2.png"
                     size="s"
                 />
 
@@ -58,7 +58,7 @@ const Day4 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/4/2.png"
+                    src="/images/devlog/4/2.png"
                     size="m"
                 />
 
@@ -67,12 +67,12 @@ const Day4 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/4/3.png"
+                    src="/images/devlog/4/3.png"
                     size="s"
                 />
 
                 <DevlogImage
-                    src="/devlog/4/4.png"
+                    src="/images/devlog/4/4.png"
                     size="s"
                 />
 
@@ -81,7 +81,7 @@ const Day4 = () => {
                 </p>
 
                 <DevlogImage
-                    src="/devlog/4/5.png"
+                    src="/images/devlog/4/5.png"
                     size="l"
                 />
 
