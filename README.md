@@ -104,8 +104,8 @@ src/
 │   └── AuthLayout.jsx
 │
 ├── pages/
-│   ├── Home.jsx
-│   └── About.jsx
+│   ├── AppPage.jsx
+│   └── LoginPage.jsx
 │
 ├── routes/
 │   ├── AppRoutes.jsx
